@@ -2,11 +2,9 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8">
-  <title>EVERHOST</title>
+  <title>EVERHOST - Oferty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Ikonka -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -14,64 +12,74 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Style główne -->
+  <!-- Prosty CSS -->
   <style>
     body {
-      margin: 0;
       font-family: 'Roboto', sans-serif;
       background: #faf9fd;
+      margin: 0;
+      padding: 0;
       color: #1a1b1f;
     }
     header {
       background: #005cbb;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-    main {
-      padding: 2rem;
-      text-align: center;
-    }
-    .btn {
-      display: inline-block;
-      background: #005cbb;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #00458f;
-    }
-    footer {
-      margin-top: 3rem;
+      color: #fff;
       padding: 1rem;
       text-align: center;
-      background: #e0e2ec;
-      color: #44474e;
-      font-size: 0.9rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .offer-card {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .offer-card h3 {
+      margin-top: 0;
+      color: #005cbb;
+    }
+    footer {
+      background: #e9e7eb;
+      text-align: center;
+      padding: 1rem;
+      font-size: 14px;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    EVERHOST
+    <h1>EVERHOST</h1>
+    <p>Twoje oferty hostingowe</p>
   </header>
 
-  <main>
-    <h1>Witamy w EVERHOST</h1>
-    <p>Twój niezawodny partner w hostingu stron internetowych.</p>
-    <a href="#oferta" class="btn">Poznaj ofertę</a>
+  <main class="container">
+    <div class="offer-card">
+      <h3>Pakiet Start</h3>
+      <p>Idealny dla małych stron i blogów.</p>
+      <p><strong>9,99 zł / miesiąc</strong></p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Pakiet Biznes</h3>
+      <p>Doskonały dla firm i sklepów online.</p>
+      <p><strong>29,99 zł / miesiąc</strong></p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Pakiet Pro</h3>
+      <p>Maksymalna wydajność i wsparcie premium.</p>
+      <p><strong>59,99 zł / miesiąc</strong></p>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 EVERHOST – Wszystkie prawa zastrzeżone.
+    &copy; 2025 EVERHOST - Wszystkie prawa zastrzeżone
   </footer>
-
 </body>
 </html>
