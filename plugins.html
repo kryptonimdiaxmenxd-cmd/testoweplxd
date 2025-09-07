@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,8 +19,9 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container fade-in">
     <h2 class="page-title">Pluginy do kupienia</h2>
+    <p style="text-align:center;" id="welcomeNick"></p>
     <div class="plugin-grid">
       <div class="plugin-card">
         <h3>Chat+</h3>
@@ -47,6 +49,22 @@
       </div>
     </div>
   </main>
+
+  <footer>
+    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
+  </footer>
+
+  <script>
+    window.onload = () => {
+      const nick = localStorage.getItem("discordNick");
+      if(nick) {
+        document.getElementById("welcomeNick").innerText = "👋 Witaj " + nick + "! Oto dostępne pluginy:";
+      }
+    }
+  </script>
+</body>
+</html>
+
 
   <footer>
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
