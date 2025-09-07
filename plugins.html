@@ -11,42 +11,47 @@
 </head>
 <body>
   <header>
-    <div class="logo">QDCODE</div>
+    <div class="logo">⚡ QDCODE</div>
     <nav>
       <a href="index.html">Strona główna</a>
       <a href="plugins.html" class="active">Pluginy</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+    <div class="discord-nick">
+      <span id="nickDisplay"></span>
+    </div>
   </header>
 
   <main class="container fade-in">
-    <h2 class="page-title">Pluginy do kupienia</h2>
-    <p style="text-align:center;" id="welcomeNick"></p>
+    <h2 class="page-title">🛠️ Pluginy do kupienia</h2>
     <div class="plugin-grid">
       <div class="plugin-card">
         <h3>Chat+</h3>
-        <p>Nowoczesny czat z emotkami, kolorami i skrótami.</p>
+        <p>Kolorowy czat z emotkami i skrótami.</p>
         <div class="price">19,99 zł</div>
         <a href="#" class="btn">Kup teraz</a>
       </div>
       <div class="plugin-card">
         <h3>Economy</h3>
-        <p>System waluty, sklepy i pełna gospodarka serwera.</p>
+        <p>System walut, sklepy i handel między graczami.</p>
         <div class="price">39,99 zł</div>
         <a href="#" class="btn">Kup teraz</a>
       </div>
       <div class="plugin-card">
         <h3>Security</h3>
-        <p>Ochrona serwera przed exploitami i nieautoryzowanymi akcjami.</p>
+        <p>Ochrona przed exploitami i włamaniami.</p>
         <div class="price">29,99 zł</div>
         <a href="#" class="btn">Kup teraz</a>
       </div>
       <div class="plugin-card">
         <h3>Rangi</h3>
-        <p>Twórz VIP, Premium i customowe rangi z dodatkowymi opcjami.</p>
+        <p>Twórz VIP, Premium i własne klasy.</p>
         <div class="price">24,99 zł</div>
         <a href="#" class="btn">Kup teraz</a>
       </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="btn">⬅ Powrót</a>
     </div>
   </main>
 
@@ -57,17 +62,9 @@
   <script>
     window.onload = () => {
       const nick = localStorage.getItem("discordNick");
-      if(nick) {
-        document.getElementById("welcomeNick").innerText = "👋 Witaj " + nick + "! Oto dostępne pluginy:";
-      }
+      if(nick) document.getElementById("nickDisplay").innerText = "👤 " + nick;
+      else document.getElementById("nickDisplay").innerText = "👤 Gość";
     }
   </script>
-</body>
-</html>
-
-
-  <footer>
-    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
-  </footer>
 </body>
 </html>
