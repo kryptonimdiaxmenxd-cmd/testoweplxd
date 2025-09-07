@@ -50,7 +50,7 @@
         <a href="#" class="btn">Kup teraz</a>
       </div>
     </div>
-    <div style="text-align:center; margin-top:2rem;">
+    <div class="back-btn">
       <a href="index.html" class="btn">⬅ Powrót</a>
     </div>
   </main>
@@ -59,12 +59,6 @@
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
 
-  <script>
-    window.onload = () => {
-      const nick = localStorage.getItem("discordNick");
-      if(nick) document.getElementById("nickDisplay").innerText = "👤 " + nick;
-      else document.getElementById("nickDisplay").innerText = "👤 Gość";
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
