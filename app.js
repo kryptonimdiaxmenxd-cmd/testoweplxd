@@ -1,40 +1,35 @@
-// --- Discord nick system ---
+// Zapis i odczyt nicku
 function saveNick() {
-  const nickInput = document.getElementById("nickInput");
-  if (nickInput.value.trim() === "") {
-    alert("⚠️ Podaj nick z Discorda!");
-    return;
+  const nick = document.getElementById("discordNick").value;
+  if (nick.trim() !== "") {
+    localStorage.setItem("discordNick", nick);
+    alert("Nick zapisany!");
   }
-  localStorage.setItem("discordNick", nickInput.value.trim());
-  alert("✅ Nick zapisany!");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const nickInput = document.getElementById("nickInput");
+window.onload = function () {
+  const nickInput = document.getElementById("discordNick");
   const savedNick = localStorage.getItem("discordNick");
   if (nickInput && savedNick) {
     nickInput.value = savedNick;
   }
-});
+};
 
-// --- QR Code Generator ---
-function generateQRCode() {
+// Generator QR Code
+function generateQR() {
   const qrContainer = document.getElementById("qrcode");
-  const textInput = document.getElementById("qrText").value;
+  qrContainer.innerHTML = ""; // wyczyszczenie
+  const qrText = document.getElementById("qrInput").value;
 
-  if (!textInput) {
-    alert("⚠️ Wpisz tekst lub link do wygenerowania QR!");
-    return;
+  if (qrText.trim() !== "") {
+    new QRCode(qrContainer, {
+      text: qrText,
+      width: 200,
+      height: 200,
+      colorDark: "#ffffff",
+      colorLight: "#181824",
+    });
+  } else {
+    alert("Wpisz link przed wygenerowaniem QR!");
   }
-
-  qrContainer.innerHTML = ""; // czyści poprzedni kod
-
-  new QRCode(qrContainer, {
-    text: textInput,
-    width: 200,
-    height: 200,
-    colorDark: "#00fff7",
-    colorLight: "#0f0f1a",
-    correctLevel: QRCode.CorrectLevel.H
-  });
 }
