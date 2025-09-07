@@ -1,62 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QDCODE - Strona główna</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Pasek nawigacji -->
   <header>
-    <div class="logo">⚡ QDCODE</div>
-    <nav>
-      <a href="index.html" class="active">Strona główna</a>
-      <a href="plugins.html">Pluginy</a>
-      <a href="kontakt.html">Kontakt</a>
+    <nav class="navbar">
+      <div class="logo">⚡ QDCODE</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Strona główna</a></li>
+        <li><a href="plugins.html">Pluginy</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+      <div class="nick-box">
+        <input type="text" id="discordNick" placeholder="Twój nick z Discorda">
+        <button onclick="saveNick()">Zapisz</button>
+      </div>
     </nav>
-    <div class="discord-nick">
-      <input type="text" id="nickInput" placeholder="Twój Discord nick">
-      <button onclick="saveNick()" class="btn small">Zapisz</button>
-    </div>
   </header>
 
-  <main class="container fade-in">
-    <section class="hero">
-      <h1>🚀 Kupuj i instaluj pluginy w minutę</h1>
-      <p>Szybkie, wydajne i bezpieczne rozszerzenia dla Twojego serwera.<br>
-      Jeden panel – zero komplikacji.</p>
-      <a href="plugins.html" class="btn big">Przeglądaj pluginy</a>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Kupuj i instaluj pluginy w minutę</h1>
+    <p>Szybkie, wydajne i bezpieczne rozszerzenia dla Twojego serwera.<br>
+    Jeden panel – zero komplikacji.</p>
+    <a href="plugins.html" class="btn-gradient">Przeglądaj pluginy</a>
+  </section>
 
-    <section class="features">
-      <div>
-        <h3>✨ Łatwe w użyciu</h3>
+  <!-- Cechy -->
+  <section class="features">
+    <h2>Dlaczego my?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>⚡ Łatwe w użyciu</h3>
         <p>Pluginy instalujesz w kilka sekund i od razu działają.</p>
       </div>
-      <div>
-        <h3>⚡ Wydajne</h3>
+      <div class="feature-card">
+        <h3>🚀 Wydajne</h3>
         <p>Minimalne zużycie zasobów, maksymalna wydajność.</p>
       </div>
-      <div>
-        <h3>🔒 Bezpieczne</h3>
+      <div class="feature-card">
+        <h3>🛡️ Bezpieczne</h3>
         <p>Dbamy o ochronę serwerów i Twoich graczy.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="qrcode-section">
-      <h2>🔗 Wygeneruj swój QR Code</h2>
-      <input type="text" id="qrText" placeholder="Wpisz tekst lub link">
-      <button onclick="generateQRCode()" class="btn">Generuj QR</button>
-      <div id="qrcode"></div>
-    </section>
-  </main>
+  <!-- QR Code -->
+  <section class="qrcode-section">
+    <h2>Wygeneruj QR do zaproszenia</h2>
+    <input type="text" id="qrInput" placeholder="Wpisz link zaproszenia">
+    <button onclick="generateQR()">Generuj QR</button>
+    <div id="qrcode"></div>
+  </section>
 
+  <!-- Stopka -->
   <footer>
-    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
+    <p>© 2025 QDCODE – Wszystkie prawa zastrzeżone</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
