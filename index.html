@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Górny pasek -->
+  <!-- Header -->
   <header>
     <div class="logo">⚡ QDCODE</div>
     <nav>
@@ -26,27 +26,37 @@
 
   <!-- Hero -->
   <section class="hero fade-in">
-    <h1>🚀 Witaj w QDCODE</h1>
-    <p>Najlepsze pluginy dla Twojego serwera. Wpisz swój nick i przejdź dalej.</p>
-    <a href="plugins.html" class="btn">Zobacz pluginy</a>
+    <div class="hero-content">
+      <h1>🚀 QDCODE</h1>
+      <p>Profesjonalne pluginy dla Twojego serwera.<br>
+      Zbudowane z pasją i dopracowane do perfekcji.</p>
+      <a href="plugins.html" class="btn">Przeglądaj pluginy</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features fade-in">
+    <div class="feature">
+      <i class="fas fa-plug"></i>
+      <h3>Łatwe w użyciu</h3>
+      <p>Pluginy instalujesz w kilka sekund i od razu działają.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-bolt"></i>
+      <h3>Wydajne</h3>
+      <p>Minimalne zużycie zasobów, maksymalna wydajność.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Bezpieczne</h3>
+      <p>Dbamy o ochronę serwerów i Twoich graczy.</p>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
 
-  <script>
-    function saveNick() {
-      const nick = document.getElementById("discordNick").value;
-      if(nick.trim() !== "") {
-        localStorage.setItem("discordNick", nick);
-        alert("✅ Zapisano Twój nick: " + nick);
-      }
-    }
-    window.onload = () => {
-      const nick = localStorage.getItem("discordNick");
-      if(nick) document.getElementById("discordNick").value = nick;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
