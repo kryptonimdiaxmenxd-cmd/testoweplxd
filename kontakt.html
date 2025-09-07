@@ -1,60 +1,45 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kontakt</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="app.js"></script>
+  <meta charset="utf-8">
+  <title>QDCODE - Kontakt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="page fade-in">
-  <header class="nav">
-    <a class="brand" href="index.html">Pluginy<span class="accent">.pro</span></a>
-
-    <nav class="nav-links">
+<body>
+  <header>
+    <div class="logo">⚡ QDCODE</div>
+    <nav>
       <a href="index.html">Strona główna</a>
       <a href="plugins.html">Pluginy</a>
-      <a href="contact.html" class="active">Kontakt</a>
-      <a href="qrcode.html">QR Code</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
     </nav>
-
-    <div class="nick-box">
-      <input id="discordNick" class="nick-input" placeholder="Twój nick z Discorda" />
-      <button class="btn ghost" id="saveNickBtn">Zapisz</button>
+    <div class="discord-nick">
+      <span id="nickDisplay"></span>
     </div>
   </header>
 
-  <section class="section narrow">
-    <h1 class="section-title center">Napisz do nas</h1>
-
-    <form class="form card" id="contactForm">
-      <label>Nick z Discorda
-        <input id="contactNick" type="text" placeholder="np. TwojNick#1234" />
-      </label>
-      <label>Adres e-mail
-        <input id="contactEmail" type="email" placeholder="twoj@email.pl" />
-      </label>
-      <label>Wiadomość
-        <textarea id="contactMsg" rows="5" placeholder="W czym możemy pomóc?"></textarea>
-      </label>
-
-      <div class="row">
-        <button type="submit" class="btn primary">Wyślij</button>
-        <a class="btn ghost" id="discordBtn" target="_blank" rel="noopener">Napisz na Discordzie</a>
-      </div>
-      <p class="muted">Twój nick zapisujemy lokalnie w przeglądarce, aby szybciej wypełniać formularze.</p>
+  <main class="container fade-in">
+    <h2 class="page-title">📬 Skontaktuj się z nami</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Imię i nazwisko" required>
+      <input type="email" placeholder="Twój e-mail" required>
+      <textarea placeholder="Twoja wiadomość" rows="5" required></textarea>
+      <button type="submit" class="btn">Wyślij</button>
     </form>
-  </section>
-
-  <footer class="footer">
-    <div>© <span id="year"></span> Pluginy.pro</div>
-    <div class="pager">
-      <a class="btn tiny ghost" href="plugins.html">← Powrót</a>
-      <a class="btn tiny ghost" href="qrcode.html">Następna →</a>
+    <div class="discord-contact">
+      <p>Lub napisz do nas na Discordzie:</p>
+      <a href="https://discord.com/" target="_blank" class="btn"><i class="fab fa-discord"></i> Nasz Discord</a>
     </div>
+  </main>
+
+  <footer>
+    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
