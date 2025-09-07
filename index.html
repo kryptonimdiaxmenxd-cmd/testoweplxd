@@ -4,13 +4,10 @@
   <meta charset="utf-8">
   <title>QDCODE - Strona główna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="logo">⚡ QDCODE</div>
     <nav>
@@ -19,43 +16,47 @@
       <a href="kontakt.html">Kontakt</a>
     </nav>
     <div class="discord-nick">
-      <input type="text" id="discordNick" placeholder="Twój Discord">
-      <button onclick="saveNick()"><i class="fab fa-discord"></i></button>
+      <input type="text" id="nickInput" placeholder="Twój Discord nick">
+      <button onclick="saveNick()" class="btn small">Zapisz</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero fade-in">
-    <div class="hero-content">
+  <main class="container fade-in">
+    <section class="hero">
       <h1>🚀 Kupuj i instaluj pluginy w minutę</h1>
-      <p>Szybkie, wydajne i bezpieczne rozszerzenia dla Twojego serwera.<br> Jeden panel – zero komplikacji.</p>
-      <a href="plugins.html" class="btn">Przeglądaj pluginy</a>
-    </div>
-  </section>
+      <p>Szybkie, wydajne i bezpieczne rozszerzenia dla Twojego serwera.<br>
+      Jeden panel – zero komplikacji.</p>
+      <a href="plugins.html" class="btn big">Przeglądaj pluginy</a>
+    </section>
 
-  <!-- Features -->
-  <section class="features fade-in">
-    <div class="feature">
-      <i class="fas fa-plug"></i>
-      <h3>Łatwe w użyciu</h3>
-      <p>Pluginy instalujesz w kilka sekund i od razu działają.</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-bolt"></i>
-      <h3>Wydajne</h3>
-      <p>Minimalne zużycie zasobów, maksymalna wydajność.</p>
-    </div>
-    <div class="feature">
-      <i class="fas fa-shield-alt"></i>
-      <h3>Bezpieczne</h3>
-      <p>Dbamy o ochronę serwerów i Twoich graczy.</p>
-    </div>
-  </section>
+    <section class="features">
+      <div>
+        <h3>✨ Łatwe w użyciu</h3>
+        <p>Pluginy instalujesz w kilka sekund i od razu działają.</p>
+      </div>
+      <div>
+        <h3>⚡ Wydajne</h3>
+        <p>Minimalne zużycie zasobów, maksymalna wydajność.</p>
+      </div>
+      <div>
+        <h3>🔒 Bezpieczne</h3>
+        <p>Dbamy o ochronę serwerów i Twoich graczy.</p>
+      </div>
+    </section>
+
+    <section class="qrcode-section">
+      <h2>🔗 Wygeneruj swój QR Code</h2>
+      <input type="text" id="qrText" placeholder="Wpisz tekst lub link">
+      <button onclick="generateQRCode()" class="btn">Generuj QR</button>
+      <div id="qrcode"></div>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
