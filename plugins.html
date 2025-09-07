@@ -1,136 +1,67 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pluginy – Sklep</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="app.js"></script>
+  <meta charset="utf-8">
+  <title>QDCODE - Pluginy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="page fade-in">
-  <header class="nav">
-    <a class="brand" href="index.html">Pluginy<span class="accent">.pro</span></a>
-
-    <nav class="nav-links">
+<body>
+  <header>
+    <div class="logo">⚡ QDCODE</div>
+    <nav>
       <a href="index.html">Strona główna</a>
       <a href="plugins.html" class="active">Pluginy</a>
-      <a href="contact.html">Kontakt</a>
-      <a href="qrcode.html">QR Code</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
-
-    <div class="nick-box">
-      <input id="discordNick" class="nick-input" placeholder="Twój nick z Discorda" />
-      <button class="btn ghost" id="saveNickBtn" title="Zapisz nick">Zapisz</button>
+    <div class="discord-nick">
+      <span id="nickDisplay"></span>
     </div>
   </header>
 
-  <section class="section">
-    <h1 class="section-title center">Wybierz swój plugin</h1>
+  <main class="container fade-in">
+    <h2 class="page-title">🛠️ Pluginy do kupienia</h2>
+    <div class="plugin-grid">
 
-    <!-- Filtry -->
-    <div class="filters card">
-      <input id="search" class="search" type="search" placeholder="Szukaj pluginu (np. ekonomia, minigry, antycheat)..." />
-      <div class="chips">
-        <button class="chip active" data-cat="all">Wszystko</button>
-        <button class="chip" data-cat="ekonomia">Ekonomia</button>
-        <button class="chip" data-cat="ochrona">Ochrona</button>
-        <button class="chip" data-cat="minigry">Minigry</button>
-        <button class="chip" data-cat="systemy">Systemy</button>
-        <button class="chip" data-cat="social">Social</button>
-      </div>
+      <div class="plugin-card"><h3>Chat+</h3><p>Kolorowy czat z emotkami i skrótami.</p><div class="price">19,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Economy</h3><p>System walut, sklepy i handel.</p><div class="price">39,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Security</h3><p>Ochrona przed exploitami.</p><div class="price">29,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Rangi</h3><p>Twórz VIP, Premium i własne klasy.</p><div class="price">24,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+
+      <div class="plugin-card"><h3>Sklep+</h3><p>Zaawansowany system sklepów.</p><div class="price">49,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Questy</h3><p>Dodaj zadania i misje dla graczy.</p><div class="price">34,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Teleport</h3><p>Nowoczesny system teleportacji.</p><div class="price">14,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Minigry</h3><p>Paczkowane minigry gotowe do użycia.</p><div class="price">59,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+
+      <div class="plugin-card"><h3>Guilds</h3><p>System gildii z rankingiem.</p><div class="price">44,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Mapy</h3><p>Dynamiczne mapy dla graczy.</p><div class="price">19,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Leveling</h3><p>System expienia i leveli.</p><div class="price">29,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>CustomItems</h3><p>Dodawaj własne przedmioty.</p><div class="price">39,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+
+      <div class="plugin-card"><h3>Ranking</h3><p>Topki graczy, gildii i PvP.</p><div class="price">24,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Survival+</h3><p>Nowe mechaniki survivalu.</p><div class="price">29,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Parkour</h3><p>Automatyczny system parkour.</p><div class="price">19,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>SkyBlock+</h3><p>Nowa generacja SkyBlocka.</p><div class="price">49,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+
+      <div class="plugin-card"><h3>AntyCheat</h3><p>Blokuje cheaty i hacki.</p><div class="price">59,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Broadcast</h3><p>Wysyłaj ogłoszenia i eventy.</p><div class="price">14,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Friends</h3><p>Dodaj system znajomych.</p><div class="price">19,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+      <div class="plugin-card"><h3>Pets</h3><p>Zwierzaki towarzyszące graczom.</p><div class="price">34,99 zł</div><a href="#" class="btn">Kup teraz</a></div>
+
     </div>
 
-    <!-- 20 kart -->
-    <div class="plugin-grid" id="pluginGrid">
-      <!-- ekonomia -->
-      <div class="plugin-card card hover-lift" data-cat="ekonomia" id="economy">
-        <h3>Economy</h3><p>Waluty, sklepy i handel.</p><div class="price">39,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="ekonomia">
-        <h3>Sklep+</h3><p>Sklepy GUI, koszyk, rabaty.</p><div class="price">49,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="ekonomia">
-        <h3>Questy</h3><p>Zadania dzienne i tygodniowe.</p><div class="price">34,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="ekonomia">
-        <h3>Leveling</h3><p>System expienia i poziomów.</p><div class="price">29,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-
-      <!-- ochrona -->
-      <div class="plugin-card card hover-lift" data-cat="ochrona" id="antycheat">
-        <h3>AntyCheat</h3><p>Detekcja i blokada cheatów.</p><div class="price">59,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="ochrona">
-        <h3>Security</h3><p>Firewall serwera + anty-exploit.</p><div class="price">29,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-
-      <!-- minigry -->
-      <div class="plugin-card card hover-lift" data-cat="minigry">
-        <h3>Minigry</h3><p>Zestaw gotowych minigierek.</p><div class="price">59,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="minigry">
-        <h3>Parkour</h3><p>Check-pointy, ghost i rekordy.</p><div class="price">19,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="minigry">
-        <h3>SkyBlock+</h3><p>Wyspy, generatory, wyzwania.</p><div class="price">49,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-
-      <!-- systemy -->
-      <div class="plugin-card card hover-lift" data-cat="systemy" id="guilds">
-        <h3>Guilds</h3><p>Gildie, wojny, rankingi.</p><div class="price">44,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>Rangi</h3><p>Role VIP, Premium, custom.</p><div class="price">24,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>Teleport</h3><p>TPA, home, spawn, warpy.</p><div class="price">14,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>Mapy</h3><p>Mapy świata i radar graczy.</p><div class="price">19,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>CustomItems</h3><p>Własne przedmioty i receptury.</p><div class="price">39,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>Survival+</h3><p>Urozmaicone mechaniki survivalu.</p><div class="price">29,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-
-      <!-- social -->
-      <div class="plugin-card card hover-lift" data-cat="social">
-        <h3>Chat+</h3><p>Kolorowy czat, emotki, skróty.</p><div class="price">19,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="social">
-        <h3>Broadcast</h3><p>Ogłoszenia, eventy, harmonogram.</p><div class="price">14,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="social">
-        <h3>Friends</h3><p>Lista znajomych i party.</p><div class="price">19,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-
-      <!-- więcej (do 20) -->
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>Ranking</h3><p>Topki graczy, gildii i PvP.</p><div class="price">24,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="systemy">
-        <h3>Achievements</h3><p>Osiągnięcia z nagrodami.</p><div class="price">22,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="ochrona">
-        <h3>Backup</h3><p>Automatyczne kopie zapasowe.</p><div class="price">17,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
-      <div class="plugin-card card hover-lift" data-cat="minigry">
-        <h3>Duels</h3><p>Pojedynki 1v1 z rankingiem.</p><div class="price">21,99 zł</div><a class="btn small">Kup teraz</a>
-      </div>
+    <div class="back-btn">
+      <a href="index.html" class="btn">⬅ Powrót</a>
     </div>
-  </section>
+  </main>
 
-  <footer class="footer">
-    <div>© <span id="year"></span> Pluginy.pro</div>
-    <div class="pager">
-      <a class="btn tiny ghost" href="index.html">← Powrót</a>
-      <a class="btn tiny ghost" href="contact.html">Następna →</a>
-    </div>
+  <footer>
+    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
