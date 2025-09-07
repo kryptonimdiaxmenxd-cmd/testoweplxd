@@ -2,7 +2,6 @@ function saveNick() {
   const nick = document.getElementById("discordNick").value;
   if (nick.trim() !== "") {
     localStorage.setItem("discordNick", nick);
-    alert("✅ Zapisano Twój nick: " + nick);
     document.querySelectorAll("#nickDisplay").forEach(el => el.innerText = "👤 " + nick);
   }
 }
