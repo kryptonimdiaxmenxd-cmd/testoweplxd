@@ -1,17 +1,19 @@
 // --- Discord nick system ---
-document.addEventListener("DOMContentLoaded", () => {
-  const nickDisplay = document.getElementById("nickDisplay");
-  let savedNick = localStorage.getItem("discordNick");
-
-  if (!savedNick) {
-    savedNick = prompt("Podaj swój nick z Discorda:");
-    if (savedNick) {
-      localStorage.setItem("discordNick", savedNick);
-    }
+function saveNick() {
+  const nickInput = document.getElementById("nickInput");
+  if (nickInput.value.trim() === "") {
+    alert("⚠️ Podaj nick z Discorda!");
+    return;
   }
+  localStorage.setItem("discordNick", nickInput.value.trim());
+  alert("✅ Nick zapisany!");
+}
 
-  if (nickDisplay && savedNick) {
-    nickDisplay.textContent = "👤 " + savedNick;
+document.addEventListener("DOMContentLoaded", () => {
+  const nickInput = document.getElementById("nickInput");
+  const savedNick = localStorage.getItem("discordNick");
+  if (nickInput && savedNick) {
+    nickInput.value = savedNick;
   }
 });
 
