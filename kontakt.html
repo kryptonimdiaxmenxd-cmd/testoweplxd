@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8">
-  <title>QDCODE - Kontakt</title>
+  <title>QDCODE - Pluginy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,40 +11,54 @@
 </head>
 <body>
   <header>
-    <div class="logo">QDCODE</div>
+    <div class="logo">⚡ QDCODE</div>
     <nav>
       <a href="index.html">Strona główna</a>
-      <a href="plugins.html">Pluginy</a>
-      <a href="kontakt.html" class="active">Kontakt</a>
+      <a href="plugins.html" class="active">Pluginy</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
+    <div class="discord-nick">
+      <span id="nickDisplay"></span>
+    </div>
   </header>
 
   <main class="container fade-in">
-    <h2 class="page-title">Kontakt</h2>
-    <p style="text-align:center;">Masz pytania? Wybierz jedną z metod:</p>
-
-    <div class="contact-options">
-      <a href="mailto:kontakt@qdcode.pl" class="btn"><i class="fas fa-envelope"></i> E-mail</a>
-      <a href="https://discord.gg/twoj-link" target="_blank" class="btn discord-btn"><i class="fab fa-discord"></i> Discord</a>
+    <h2 class="page-title">🛠️ Pluginy do kupienia</h2>
+    <div class="plugin-grid">
+      <div class="plugin-card">
+        <h3>Chat+</h3>
+        <p>Kolorowy czat z emotkami i skrótami.</p>
+        <div class="price">19,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
+      <div class="plugin-card">
+        <h3>Economy</h3>
+        <p>System walut, sklepy i handel między graczami.</p>
+        <div class="price">39,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
+      <div class="plugin-card">
+        <h3>Security</h3>
+        <p>Ochrona przed exploitami i włamaniami.</p>
+        <div class="price">29,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
+      <div class="plugin-card">
+        <h3>Rangi</h3>
+        <p>Twórz VIP, Premium i własne klasy.</p>
+        <div class="price">24,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
     </div>
-
-    <form class="contact-form">
-      <input type="text" placeholder="Imię i nazwisko" required>
-      <input type="email" placeholder="Twój e-mail" required>
-      <textarea placeholder="Twoja wiadomość" rows="5" required></textarea>
-      <button type="submit" class="btn">Wyślij</button>
-    </form>
+    <div class="back-btn">
+      <a href="index.html" class="btn">⬅ Powrót</a>
+    </div>
   </main>
 
   <footer>
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
-</body>
-</html>
 
-
-  <footer>
-    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
