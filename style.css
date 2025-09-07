@@ -1,19 +1,21 @@
-/* Reset + fonty */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f7f8fc;
-  color: #222;
+  background: #121212;
+  color: #eee;
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #005cbb, #0077ff);
+  background: linear-gradient(90deg, #005cbb, #6c63ff);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 header .logo {
   font-size: 1.5rem;
@@ -35,15 +37,35 @@ header nav a.active {
 .hero {
   text-align: center;
   padding: 5rem 1rem;
-  background: linear-gradient(180deg, #eef4ff, #ffffff);
+  background: linear-gradient(180deg, #1e1e2e, #121212);
 }
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #6c63ff;
 }
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #bbb;
+}
+
+/* Discord nick box */
+.discord-box {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.discord-box input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+  margin-right: 0.5rem;
+}
+.discord-box .saved {
+  margin-top: 1rem;
+  color: #6c63ff;
+  font-weight: 600;
 }
 
 /* Container */
@@ -58,6 +80,7 @@ header nav a.active {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #6c63ff;
 }
 .plugin-grid {
   display: grid;
@@ -65,23 +88,23 @@ header nav a.active {
   gap: 2rem;
 }
 .plugin-card {
-  background: #fff;
+  background: #1e1e2e;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .plugin-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.7);
 }
 .plugin-card h3 {
-  color: #005cbb;
+  color: #6c63ff;
   margin-bottom: 0.5rem;
 }
 .plugin-card p {
-  color: #555;
+  color: #bbb;
   font-size: 0.95rem;
   min-height: 50px;
 }
@@ -89,13 +112,19 @@ header nav a.active {
   margin: 1rem 0;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #0077ff;
+  color: #00d4ff;
 }
 
-/* Formularz kontaktowy */
+/* Kontakt */
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
 .contact-form {
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -103,7 +132,7 @@ header nav a.active {
 .contact-form textarea {
   margin-bottom: 1rem;
   padding: 0.8rem;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 1rem;
 }
@@ -114,23 +143,39 @@ header nav a.active {
 /* Przycisk */
 .btn {
   display: inline-block;
-  background: #0077ff;
+  background: #6c63ff;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s;
+  transition: transform 0.2s, background 0.3s;
 }
 .btn:hover {
   background: #005cbb;
+  transform: scale(1.05);
+}
+.discord-btn {
+  background: #5865f2;
+}
+.discord-btn:hover {
+  background: #4752c4;
+}
+
+/* Animacje */
+.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Stopka */
 footer {
-  background: #eef2f7;
+  background: #1e1e2e;
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
-  color: #444;
+  color: #aaa;
 }
