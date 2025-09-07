@@ -1,177 +1,125 @@
-<!doctype html>
 <html lang="pl">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="BlazeCode">
 
- <meta charset="UTF-8">
- <meta name="viewport"
- content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Wybór serwera - Averhub.pl</title>
- <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+    <title>RAPY.PL</title>
 
- <!--  CSS  -->
- <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
- <link rel="stylesheet" href="/assets/css/general.css">
- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
- <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#101010">
+    <meta name="msapplication-TileColor" content="#101010">
+    <meta name="theme-color" content="#FFFFFF">
 
+    <link href="assets/css/app.min.css?4" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/app.min.js?3" defer="defer"></script>
 </head>
-<body ondragstart="return false" ondrag="return false">
 
-<div class="container">
- <nav data-aos="fade-up">
+<body class="antialiased relative">
 
- <div class="navbar__brand">
-
- <a href="/">
- <img src="/assets/img/logo.png" alt="logo" style="height: 40px;">
- </a>
-
- <div class="navbar__toggle" onclick="navbar()">
- <h5>MENU =</h5>
- </div>
-
- </div>
-
- <div class="navbar__links" id="navbarNav" data-aos="fade-up">
-
- <ul>
-  <li><a href="/"   class="active" >Sklep</a>
- </li>
-  <li><a href="/regulamin"  >Regulamin</a>
- </li>
-  <li><a href="/voucher"  >Voucher</a>
- </li>
-  <li><a href="/daily_reward"  >Dzienna nagroda</a>
- </li>
-  </ul>
-
- </div>
-
- </nav>
+<div class="fixed top-0 left-0 h-screen w-full z-50 bg-white flex items-center justify-center" id="preloader">
+    <div class="max-w-[385px] w-full flex flex-col justify-center items-center gap-12">
+        <div class="w-16 h-16 relative">
+            <img src="assets/img/logo_main_black.png" alt="logo" class="object-cover w-full h-full" />
+        </div>
+        <div class="flex flex-col w-full justify-center items-center">
+            <p class="text-tertiary-950 text-[20px]">ŁADOWANIE</p>
+            <div class="w-full h-[1px] relative bg-tertiary-200 my-4 after:animate-preloaderLoading after:absolute after:h-[3px] after:bg-tertiary-950 after:left-0 after:-top-[1px] after:rounded-full after:w-20"></div>
+        </div>
+    </div>
 </div>
-<div class="container">
-  <header>
- <div class="title">
- <div class="title__text">
- <h1 data-aos="fade-up">01</h1>
- <div data-aos="fade-up" class="hr"></div>
- <h1 data-aos="fade-up">WYBIERZ TRYB</h1>
- </div>
- <div class="title__line">
- <img src="/assets/img/lines.svg" alt="line">
- </div>
- </div>
- </header>
- <section class="shop">
- <div class="row">
-  <div class="col-xl-4 col-md-6">
- <div class="tile" data-aos="zoom-out-up">
- <h2>ANARCHIA-FFA</h2>
- <button class="black-button" onclick="location.href='/shop/anaffa'">
- PRZEJDŹ
- <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
- xmlns="http://www.w3.org/2000/svg">
- <path
- d="M13.7762 5.89286L8.72033 0.249511C8.57601 0.0884215 8.38365 0 8.17855 0C7.97322 0 7.78098 0.0885486 7.63665 0.249511L7.17762 0.762001C7.03341 0.922836 6.95396 1.13767 6.95396 1.36672C6.95396 1.59565 7.03341 1.81772 7.17762 1.97856L10.1272 5.27798H0.756335C0.333835 5.27798 0 5.64716 0 6.11887V6.8434C0 7.3151 0.333835 7.72151 0.756335 7.72151H10.1606L7.17773 11.0394C7.03352 11.2004 6.95407 11.4094 6.95407 11.6385C6.95407 11.8673 7.03352 12.0793 7.17773 12.2403L7.63677 12.7511C7.78109 12.9122 7.97333 13 8.17866 13C8.38377 13 8.57612 12.9111 8.72045 12.75L13.7763 7.10675C13.921 6.94516 14.0006 6.72944 14 6.50013C14.0005 6.27005 13.921 6.05421 13.7762 5.89286Z"
- fill="white"/>
- </svg>
- </button>
- <img src="https://i.imgur.com/c6efYBU.png" alt="" class="float">
- <img src="/assets/img/product_bg.png" alt="">
- </div>
- </div>
-  </div>
- </section>
-</div>
-<footer data-aos="fade-up" >
 
- <div class="container">
- <div class="row" data-aos="fade-up">
+<header class="w-full min-h-full">
+    <div class="w-full min-h-full flex justify-center xl:flex-col">
+        <div class="w-full h-[100vh] lg:h-auto bg-white relative flex overflow-hidden flex-col items-center justify-between gap-12 xl:order-2">
+            <img src="assets/img/letter/abs_dots_top.png" alt="pattern" class="absolute top-0 left-0 w-full h-full object-contain object-top invert" />
+            <div class="w-[95px] h-[231px] bg-tertiary-950 flex relative items-end justify-center px-4 pb-8 md:h-[112px] md:w-[72px] md:pb-4">
+                <a href="/"
+                   class="block transition-all duration-300 hover:-rotate-2 hover:scale-90 aspect-square w-full"
+                >
+                    <img
+                            src="assets/img/logo_main.png"
+                            alt="rapy.pl"
+                    />
+                </a>
+            </div>
+            <div class="flex flex-col relative gap-8 items-center w-full justify-end">
+                <div class="flex flex-col gap-5 items-center justify-center">
+                    <div class="flex flex-col gap-6 items-center justify-center relative">
+                        <div class="py-1 px-6 bg-red-500 text-center">
+                            <p class="text-white">NOWOŚĆ</p>
+                        </div>
+                        <div class="flex flex-col gap-2 items-center">
+                            <h2 class="text-tertiary-950 text-[25px] font-medium md:text-[22px]">ZOBACZ NASZĄ PIERWSZĄ</h2>
+                            <p class="text-tertiary-950 text-xl md:text-lg">LIMITOWANĄ KOLEKCJĘ!</p>
+                        </div>
+                    </div>
+                    <a href="https://rapymerch.pl/" target="_blank" class="btn group btn-tertiary overflow-hidden w-full min-w-[172px] max-w-[172px] md:max-w-full">
+                        <p class="absolute left-1/2 -translate-x-1/2 duration-200 group-hover:-translate-y-[48px]">SPRAWDZAM</p>
+                        <p class="absolute left-1/2 -translate-x-1/2 duration-200 translate-y-[48px] group-hover:-translate-y-[0]">RAPYMERCH.PL</p>
+                    </a>
+                </div>
+                <img src="assets/img/letter/bg_letter_merch.png" alt="rapy" class="pt-2 w-full max-w-[85%] mx-auto lg:max-w-[75%]" />
+            </div>
+        </div>
+        <div class="w-full h-[100vh] lg:h-auto bg-black relative flex overflow-hidden flex-col items-center justify-between gap-6 xl:order-1 xl:pt-12">
+            <img src="assets/img/letter/abs_dots_top.png" alt="pattern" class="absolute top-0 left-0 w-full h-full object-contain object-top" />
+            <div class="flex flex-col gap-1 items-center mt-auto mb-0 xl:mb-6">
+                <p class="text-white text-[18px]">Witaj w Community Ekipy</p>
+                <p class="text-white text-[88px] leading-none font-extrabold md:text-[64px]">RAPY</p>
+            </div>
+            <div class="mt-auto flex flex-col relative gap-8 w-full items-center justify-end">
+                <div class="flex flex-col gap-5 items-center justify-center">
+                    <div class="flex flex-col gap-6 items-center justify-center relative">
+                        <div class="flex flex-col gap-2 items-center">
+                            <h2 class="text-white text-[25px] font-medium md:text-[22px]">DOŁĄCZ DO GRY Z EKIPĄ RAPY</h2>
+                            <p class="text-white text-xl md:text-lg">NA NASZYM SERWERZE RAPY.PL</p>
+                        </div>
+                    </div>
+                    <a href="mc" target="_blank" class="btn group bg-white hover:bg-white text-tertiary-950 overflow-hidden w-full min-w-[172px] max-w-[172px] md:max-w-full">
+                        <p class="absolute left-1/2 -translate-x-1/2 duration-200 group-hover:-translate-y-[48px]">WBIJAM</p>
+                        <p class="absolute left-1/2 -translate-x-1/2 duration-200 translate-y-[48px] group-hover:-translate-y-[0]">RAPY.PL</p>
+                    </a>
+                </div>
+                <img src="assets/img/letter/bg_letter_mc.png" alt="rapy" class="pt-2 w-full max-w-[85%] mx-auto lg:max-w-[75%]" />
+            </div>
+        </div>
+        <div class="w-full h-[100vh] lg:h-auto bg-white relative flex overflow-hidden flex-col items-center justify-between gap-12 xl:order-3 xl:pt-12">
+            <img src="assets/img/letter/abs_dots_top.png" alt="pattern" class="absolute top-0 left-0 w-full h-full object-contain object-top invert" />
+            <div class="mt-auto flex flex-col relative gap-8 items-center w-full justify-end">
+                <div class="relative flex flex-col gap-5 items-center justify-center">
+                    <img src="assets/img/letter/abs_axe.png" alt="rapy axe" class="disable_select disable_drag absolute -right-24 -bottom-8 w-[115px] h-[148px]" />
+                    <img src="assets/img/letter/abs_pickaxe_left.png" alt="rapy pickaxe" class="disable_select disable_drag absolute -left-24 -bottom-16 w-[82px] h-[99px]" />
+                    <img src="assets/img/letter/abs_pickaxe_right.png" alt="rapy pickaxe" class="disable_select disable_drag absolute left-1/2 -translate-x-1/2 -top-40 w-[110px] h-[114px] xl:hidden" />
 
- <div class="col-lg-6">
+                    <div class="flex flex-col gap-6 items-center justify-center relative">
+                        <div class="py-1 px-6 bg-red-500 text-center">
+                            <p class="text-white">NOWOŚĆ</p>
+                        </div>
+                        <div class="flex flex-col gap-2 items-center">
+                            <h2 class="text-tertiary-950 text-[25px] font-medium md:text-[22px]">STWÓRZ SWÓJ WŁASNY</h2>
+                            <p class="text-tertiary-950 text-xl md:text-lg">SERWER DLA GRACZY!</p>
+                        </div>
+                    </div>
+                    <a href="https://rapyhost.pl/" target="_blank" class="btn group btn-tertiary overflow-hidden w-full min-w-[172px] max-w-[172px] md:max-w-full">
+                        <p class="absolute left-1/2 -translate-x-1/2 duration-200 group-hover:-translate-y-[48px]">LECIMY</p>
+                        <p class="absolute left-1/2 -translate-x-1/2 duration-200 translate-y-[48px] group-hover:-translate-y-[0]">RAPYHOST.PL</p>
+                    </a>
+                </div>
+                <img src="assets/img/letter/bg_letter_hosting.png" alt="rapy" class="pt-2 w-full max-w-[85%] mx-auto lg:max-w-[75%]" />
+            </div>
+        </div>
+    </div>
+</header>
 
- <img src="/assets/img/logo.png" alt="logo">
+<script src="assets/js/plug.Preloader.js"></script>
 
- <h6>&copy; 2025 Averhub.pl. Wszelkie prawa zastrzeżone</h6>
-
- <div class="spaceis">
- <img src="https://i.imgur.com/cklgOUt.png" class="spaceis__img" alt="SpaceIs">
- <h5 class="spaceis__info">Zasilane przez <a target="_blank" href="https://spaceis.pl">SpaceIs</a>
- </h5>
- </div>
-
- </div>
-
- <div class="col-lg-3 footer-right">
-
- <h5>Nawigacja</h5>
-
- <ul>
-  <li><a href="/"
- >Sklep</a>
- </li>
-  <li><a href="/regulamin"
- >Regulamin</a>
- </li>
-  <li><a href="/voucher"
- >Voucher</a>
- </li>
-  <li><a href="/daily_reward"
- >Dzienna nagroda</a>
- </li>
-  </ul>
-
- </div>
-
- <div class="col-lg-3 footer-right">
-
- <h5>Social Media</h5>
-
- <ul>
-  <li>
- <a href="https://www.tiktok.com/@dusiolll" class="social__box" target="_blank">
- Tiktok
- </a>
- </li>
-  <li>
- <a href="https://www.youtube.com/channel/UCNODiPhIv3LEQBjfGyW8XKA" class="social__box" target="_blank">
- YouTube
- </a>
- </li>
-  <li>
- <a href="https://discord.com/invite/YBwbqtBvrD" class="social__box" target="_blank">
- Discord
- </a>
- </li>
-  </ul>
-
- </div>
-
- <div class="col-12 footer-long">
- <p>
- PL - Serwer Averhub.pl nie jest w żaden sposób powiązany z firmą Mojang lub Microsoft. Dochody ze sklepu
- przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera
- </p>
- </div>
-
- </div>
- </div>
-
-</footer>
-
-
-<!--  JS  -->
-<script src="/assets/js/script.js"></script>
-<script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
- const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
- const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
- AOS.init();
-</script>
-<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </body>
+
 </html>
