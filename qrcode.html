@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generator QR</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- lekka biblioteka QR (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="page fade-in">
+  <header class="nav">
+    <a class="brand" href="index.html">Pluginy<span class="accent">.pro</span></a>
+
+    <nav class="nav-links">
+      <a href="index.html">Strona główna</a>
+      <a href="plugins.html">Pluginy</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="qrcode.html" class="active">QR Code</a>
+    </nav>
+
+    <div class="nick-box">
+      <input id="discordNick" class="nick-input" placeholder="Twój nick z Discorda" />
+      <button class="btn ghost" id="saveNickBtn">Zapisz</button>
+    </div>
+  </header>
+
+  <section class="section narrow">
+    <h1 class="section-title center">Wygeneruj QR Code</h1>
+    <div class="form card">
+      <label>Wpisz URL (np. zaproszenie Discord)
+        <input id="qrInput" type="url" placeholder="https://discord.gg/twoj-serwer" />
+      </label>
+      <button id="qrBtn" class="btn primary">Generuj</button>
+    </div>
+
+    <div class="qr-box card center" id="qrBox">
+      <div id="qr" class="qr"></div>
+      <a id="qrDownload" class="btn small ghost" download="qrcode.png">Pobierz PNG</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Pluginy.pro</div>
+    <div class="pager">
+      <a class="btn tiny ghost" href="contact.html">← Powrót</a>
+      <a class="btn tiny ghost" href="index.html">Strona główna</a>
+    </div>
+  </footer>
+</body>
+</html>
