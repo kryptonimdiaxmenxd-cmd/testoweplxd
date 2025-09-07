@@ -2,84 +2,167 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8">
-  <title>EVERHOST - Oferty</title>
+  <title>QDCODE - Pluginy do kupienia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- Prosty CSS -->
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #faf9fd;
       margin: 0;
-      padding: 0;
-      color: #1a1b1f;
+      font-family: 'Roboto', sans-serif;
+      background: #fafafa;
+      color: #222;
     }
     header {
       background: #005cbb;
-      color: #fff;
-      padding: 1rem;
+      color: white;
+      padding: 1rem 2rem;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #f0f4ff;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
     }
     .container {
       max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    .offer-card {
-      background: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .plugin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    .offer-card h3 {
-      margin-top: 0;
+    .plugin-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .plugin-card h3 {
+      margin: 0.5rem 0;
       color: #005cbb;
     }
+    .plugin-card p {
+      font-size: 0.95rem;
+      color: #555;
+      min-height: 50px;
+    }
+    .price {
+      font-weight: bold;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #005cbb;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #00458f;
+    }
     footer {
-      background: #e9e7eb;
-      text-align: center;
+      margin-top: 3rem;
+      background: #eee;
       padding: 1rem;
-      font-size: 14px;
-      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #444;
     }
   </style>
 </head>
 <body>
+  <!-- Główny nagłówek -->
   <header>
-    <h1>EVERHOST</h1>
-    <p>Twoje oferty hostingowe</p>
+    <h1>QDCODE</h1>
+    <nav>
+      <a href="#home">Strona główna</a>
+      <a href="#plugins">Pluginy</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <div class="offer-card">
-      <h3>Pakiet Start</h3>
-      <p>Idealny dla małych stron i blogów.</p>
-      <p><strong>9,99 zł / miesiąc</strong></p>
-    </div>
+  <!-- Sekcja hero -->
+  <section id="home" class="hero">
+    <h2>Najlepsze pluginy dla Twojej strony i serwera</h2>
+    <p>Wybierz, kup i ciesz się nowymi funkcjami w kilka minut!</p>
+    <a href="#plugins" class="btn">Zobacz pluginy</a>
+  </section>
 
-    <div class="offer-card">
-      <h3>Pakiet Biznes</h3>
-      <p>Doskonały dla firm i sklepów online.</p>
-      <p><strong>29,99 zł / miesiąc</strong></p>
-    </div>
-
-    <div class="offer-card">
-      <h3>Pakiet Pro</h3>
-      <p>Maksymalna wydajność i wsparcie premium.</p>
-      <p><strong>59,99 zł / miesiąc</strong></p>
+  <!-- Sekcja Pluginy -->
+  <main id="plugins" class="container">
+    <h2 style="text-align:center; margin-bottom:2rem;">Pluginy do kupienia</h2>
+    <div class="plugin-grid">
+      <div class="plugin-card">
+        <h3>Plugin Chat+</h3>
+        <p>Rozszerza system czatu o emotki, kolory i szybkie komendy.</p>
+        <div class="price">19,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
+      <div class="plugin-card">
+        <h3>Plugin Economy</h3>
+        <p>Dodaje system waluty, sklepów i handlu między graczami.</p>
+        <div class="price">39,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
+      <div class="plugin-card">
+        <h3>Plugin Security</h3>
+        <p>Zabezpiecza Twój serwer przed atakami i nieautoryzowanymi akcjami.</p>
+        <div class="price">29,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
+      <div class="plugin-card">
+        <h3>Plugin Rangi</h3>
+        <p>Twórz rangi VIP, Premium i customowe z dodatkowymi uprawnieniami.</p>
+        <div class="price">24,99 zł</div>
+        <a href="#" class="btn">Kup teraz</a>
+      </div>
     </div>
   </main>
 
+  <!-- Sekcja kontakt -->
+  <section id="kontakt" class="container">
+    <h2 style="text-align:center;">Kontakt</h2>
+    <p style="text-align:center;">Masz pytania? Skontaktuj się z nami: <a href="mailto:kontakt@qdcode.pl">kontakt@qdcode.pl</a></p>
+  </section>
+
+  <!-- Stopka -->
   <footer>
-    &copy; 2025 EVERHOST - Wszystkie prawa zastrzeżone
+    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
 </body>
 </html>
