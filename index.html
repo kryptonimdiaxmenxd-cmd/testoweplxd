@@ -5,36 +5,30 @@
   <title>QDCODE - Strona główna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Ikony FontAwesome (Discord itp.) -->
   <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Górny pasek -->
   <header>
-    <div class="logo">QDCODE</div>
+    <div class="logo">⚡ QDCODE</div>
     <nav>
       <a href="index.html" class="active">Strona główna</a>
       <a href="plugins.html">Pluginy</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
+    <div class="discord-nick">
+      <input type="text" id="discordNick" placeholder="Twój Discord">
+      <button onclick="saveNick()"><i class="fab fa-discord"></i></button>
+    </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero fade-in">
-    <h1>QDCODE</h1>
-    <p>Profesjonalne pluginy dla Twojego serwera i strony – szybciej, prościej, lepiej.</p>
+    <h1>🚀 Witaj w QDCODE</h1>
+    <p>Najlepsze pluginy dla Twojego serwera. Wpisz swój nick i przejdź dalej.</p>
     <a href="plugins.html" class="btn">Zobacz pluginy</a>
-  </section>
-
-  <section class="discord-box fade-in">
-    <h2>Podaj swój nick z Discorda</h2>
-    <input type="text" id="discordNick" placeholder="Np. TwojNick#1234">
-    <button class="btn" onclick="saveNick()">Zapisz nick</button>
-    <p id="savedNick" class="saved"></p>
   </section>
 
   <footer>
@@ -46,14 +40,12 @@
       const nick = document.getElementById("discordNick").value;
       if(nick.trim() !== "") {
         localStorage.setItem("discordNick", nick);
-        document.getElementById("savedNick").innerText = "✅ Twój nick zapisany: " + nick;
+        alert("✅ Zapisano Twój nick: " + nick);
       }
     }
     window.onload = () => {
       const nick = localStorage.getItem("discordNick");
-      if(nick) {
-        document.getElementById("savedNick").innerText = "✅ Twój nick: " + nick;
-      }
+      if(nick) document.getElementById("discordNick").value = nick;
     }
   </script>
 </body>
