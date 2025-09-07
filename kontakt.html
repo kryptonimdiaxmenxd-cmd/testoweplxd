@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +19,15 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container fade-in">
     <h2 class="page-title">Kontakt</h2>
-    <p style="text-align:center;">Masz pytania? Skontaktuj się z nami!</p>
+    <p style="text-align:center;">Masz pytania? Wybierz jedną z metod:</p>
+
+    <div class="contact-options">
+      <a href="mailto:kontakt@qdcode.pl" class="btn"><i class="fas fa-envelope"></i> E-mail</a>
+      <a href="https://discord.gg/twoj-link" target="_blank" class="btn discord-btn"><i class="fab fa-discord"></i> Discord</a>
+    </div>
+
     <form class="contact-form">
       <input type="text" placeholder="Imię i nazwisko" required>
       <input type="email" placeholder="Twój e-mail" required>
@@ -28,6 +35,13 @@
       <button type="submit" class="btn">Wyślij</button>
     </form>
   </main>
+
+  <footer>
+    &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
+  </footer>
+</body>
+</html>
+
 
   <footer>
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
