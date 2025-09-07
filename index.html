@@ -9,27 +9,52 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Style wspólne -->
+  <!-- Ikony FontAwesome (Discord itp.) -->
+  <script src="https://kit.fontawesome.com/a2d9d6c6e0.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="logo">QDCODE</div>
     <nav>
-      <a href="index.html">Strona główna</a>
+      <a href="index.html" class="active">Strona główna</a>
       <a href="plugins.html">Pluginy</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero fade-in">
     <h1>QDCODE</h1>
-    <p>Profesjonalne pluginy, które wzbogacą Twój serwer i stronę.</p>
+    <p>Profesjonalne pluginy dla Twojego serwera i strony – szybciej, prościej, lepiej.</p>
     <a href="plugins.html" class="btn">Zobacz pluginy</a>
+  </section>
+
+  <section class="discord-box fade-in">
+    <h2>Podaj swój nick z Discorda</h2>
+    <input type="text" id="discordNick" placeholder="Np. TwojNick#1234">
+    <button class="btn" onclick="saveNick()">Zapisz nick</button>
+    <p id="savedNick" class="saved"></p>
   </section>
 
   <footer>
     &copy; 2025 QDCODE – Wszystkie prawa zastrzeżone
   </footer>
+
+  <script>
+    function saveNick() {
+      const nick = document.getElementById("discordNick").value;
+      if(nick.trim() !== "") {
+        localStorage.setItem("discordNick", nick);
+        document.getElementById("savedNick").innerText = "✅ Twój nick zapisany: " + nick;
+      }
+    }
+    window.onload = () => {
+      const nick = localStorage.getItem("discordNick");
+      if(nick) {
+        document.getElementById("savedNick").innerText = "✅ Twój nick: " + nick;
+      }
+    }
+  </script>
 </body>
 </html>
